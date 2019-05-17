@@ -40,33 +40,34 @@ def getCategory():
     correctChoice = False
     
     while correctChoice==False:
+        #this could be smoother but I just don't have time for it rn
         userChoice=input("What category would you like?\n1: Mythology\n2: Literature\n3:Food and Drink\n4:Pop Music\n5: Hodgepodge\n6:Stupid Answers\n")
-        if userChoice.lower()=="mythology" or userChoice.lower()=="1" or userChoice.lower()==1:
+        if userChoice.lower()=="mythology" or userChoice.lower()=="1" or userChoice.lower()==1 and len(mythologyChoice)>0:
             theCategory = categoryCode[0]["category"]
             correctChoice=True
             print(f"You chose {theCategory}.")
             return theCategory
-        elif userChoice.lower()=="literature" or userChoice=="2" or userChoice==2:
+        elif userChoice.lower()=="literature" or userChoice=="2" or userChoice==2 and len(literatureChoice)>0:
             theCategory=categoryCode[1]["category"]
             correctChoice=True
             print(f"You chose {theCategory}.")
             return theCategory
-        elif userChoice.lower()=="food and drink" or userChoice=="3" or userChoice==3:
+        elif userChoice.lower()=="food and drink" or userChoice=="3" or userChoice==3 and len(foodDrinkChoice)>0:
             correctChoice=True
             theCategory=categoryCode[2]["category"]
             print(f"You chose {theCategory}.")
             return theCategory
-        elif userChoice.lower()=="pop music" or userChoice=="4" or userChoice==4:
+        elif userChoice.lower()=="pop music" or userChoice=="4" or userChoice==4 and len(popMusicChoice)>0:
             correctChoice=True
             theCategory=categoryCode[3]["category"]
             print(f"You chose {theCategory}.")
             return theCategory
-        elif userChoice.lower()=="hodgepodge" or userChoice=="5" or userChoice==5:
+        elif userChoice.lower()=="hodgepodge" or userChoice=="5" or userChoice==5 and len(hodgepodgeChoice)>0:
             correctChoice=True
             theCategory=categoryCode[4]["category"]
             print(f"You chose {theCategory}.")
             return theCategory
-        elif userChoice.lower()=="stupid answers" or userChoice=="6" or userChoice==6:
+        elif userChoice.lower()=="stupid answers" or userChoice=="6" or userChoice==6 and len(stupidAnswersChoice)>0:
             correctChoice=True
             theCategory=categoryCode[5]["category"]
             print(f"You chose {theCategory}.")
